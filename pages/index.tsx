@@ -3,6 +3,7 @@ import TopAds from 'components/Ads/Top';
 import EditorChoice from 'components/EditorChoice';
 import LatestArticle from 'components/LatestArticle';
 import LatesReview from 'components/LatestReview';
+import PopularGroup from 'components/PopularGroup';
 import ProductMatches from 'components/ProductMatches';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <AdsInternal />
       <LatestArticle />
       <LatesReview />
+      <PopularGroup />
     </>
   );
 };
