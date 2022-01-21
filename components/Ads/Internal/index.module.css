@@ -1,0 +1,30 @@
+/* ======= Ads ======= */
+.adsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.adsContainer .adsTopFrame {
+  height: 50px;
+  width: 970px;
+  background-color: #d8d8d8;
+}
+
+.adsContainer .adsBilboard {
+  height: 250px;
+  width: 970px;
+  background-color: #d8d8d8;
+}
+
+.adsContainer .adsText {
+  height: 100%;
+  color: #5a5a5a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

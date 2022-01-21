@@ -1,0 +1,39 @@
+.cardReview {
+  width: 320px;
+  height: auto;
+  padding: 1rem;
+  border: 1px solid #939393;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.cardReview .topCardReview {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #939393;
+}
+
+.cardReview .topCardReview .imgCardReview {
+  height: 60px;
+  width: 65px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.cardReview .bottomCardReview .rateReview {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2rem 0;
+}
+
+.cardReview .userReview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 285px;
+  gap: 0.4rem;
+}

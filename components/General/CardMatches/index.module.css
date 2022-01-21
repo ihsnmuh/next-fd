@@ -1,25 +1,8 @@
-.editorCard {
-  position: relative;
-}
-
-.editorCard .editorUserCard {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  position: absolute;
-  top: -45px;
-  left: 1.5rem;
-}
-
-.editorCard .editorUserCard img {
-  border-radius: 50%;
-}
-
 .editorCard .editorContentCard {
-  min-height: 350px;
+  /* min-height: 374px; */
+  height: 100%;
   width: 196px;
   border-radius: 0.5rem;
-  border: 1px solid rgb(151, 151, 151);
   padding: 8px;
   background-color: #ffffff;
 }

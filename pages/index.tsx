@@ -1,5 +1,9 @@
+import AdsInternal from 'components/Ads/Internal';
 import TopAds from 'components/Ads/Top';
 import EditorChoice from 'components/EditorChoice';
+import LatestArticle from 'components/LatestArticle';
+import LatesReview from 'components/LatestReview';
+import ProductMatches from 'components/ProductMatches';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -12,6 +16,10 @@ const Home: NextPage = () => {
       </Head>
       <TopAds />
       <EditorChoice />
+      <ProductMatches />
+      <AdsInternal />
+      <LatestArticle />
+      <LatesReview />
     </>
   );
 };

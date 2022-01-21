@@ -1,0 +1,18 @@
+.lastestDescription {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lastestDescription .seemoreArt {
+  text-decoration: none;
+  color: #dc294f;
+}
+
+.articlesContainer {
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
+}

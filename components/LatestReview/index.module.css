@@ -1,0 +1,94 @@
+.containerFluid {
+  padding-left: 5.3%;
+  padding-right: 5.3%;
+  min-width: 1140px;
+  max-width: calc(1230px + 10.6%);
+  margin: 1rem auto;
+  display: flex;
+}
+
+.lastestDescription {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lastestDescription .seemoreArt {
+  text-decoration: none;
+  color: #dc294f;
+}
+
+.contentLastest {
+  width: 70%;
+  margin-right: 2rem;
+}
+
+.adsReviewLastest {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 6rem;
+}
+
+.adsMr {
+  /* margin-top: 6rem; */
+  height: 250px;
+  width: 300px;
+  background-color: #d8d8d8;
+}
+
+.adsMr .adsText {
+  height: 100%;
+  color: #5a5a5a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.reviews .cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.reviews .cards .cardReview {
+  width: 320px;
+  height: auto;
+  padding: 1rem;
+  border: 1px solid #939393;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.reviews .cards .cardReview .topCardReview {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #939393;
+}
+
+.reviews .cards .cardReview .topCardReview .imgCardReview {
+  height: 60px;
+  width: 65px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.reviews .cards .cardReview .bottomCardReview .rateReview {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2rem 0;
+}
+
+.reviews .cards .cardReview .userReview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 285px;
+}
