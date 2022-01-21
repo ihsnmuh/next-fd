@@ -1,0 +1,47 @@
+.editorCard {
+  position: relative;
+}
+
+.editorCard .editorUserCard {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  position: absolute;
+  top: -45px;
+  left: 1.5rem;
+}
+
+.editorCard .editorUserCard img {
+  border-radius: 50%;
+}
+
+.editorCard .editorContentCard {
+  height: 350px;
+  width: 196px;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(151, 151, 151);
+  padding: 8px;
+  background-color: #ffffff;
+}
+
+.editorContentCard img {
+  width: 100%;
+  height: 182px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.editorContentCard .starsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  margin: 0.4rem 0;
+}
+
+.editorContentCard .starsContainer .stars {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}

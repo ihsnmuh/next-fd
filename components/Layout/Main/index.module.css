@@ -1,0 +1,7 @@
+.main {
+  padding-left: 5.3%;
+  padding-right: 5.3%;
+  min-width: 1140px;
+  max-width: calc(1230px + 10.6%);
+  margin: 8rem auto;
+}
