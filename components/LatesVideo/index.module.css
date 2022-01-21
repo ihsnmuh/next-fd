@@ -1,0 +1,32 @@
+.lastestDescription {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lastestDescription .seemoreArt {
+  text-decoration: none;
+  color: #dc294f;
+}
+
+.containerVideo {
+  margin-top: 3rem;
+  width: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'photoOne photoTwo'
+    'photoOne photoThree';
+  grid-template-columns: 1fr 30%;
+}
+
+.containerVideo > div:first-child {
+  grid-area: photoOne;
+  height: 450px;
+}
+
+.containerVideo .imgCover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+}
