@@ -28,7 +28,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  padding-top: 6rem;
+  /* padding-top: 6rem; */
 }
 
 .adsMr {
@@ -50,8 +50,8 @@
 .reviews .cards {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
+  justify-content: center;
+  margin: 2rem 0;
 }
 
 .reviews .cards .cardReview {

@@ -5,6 +5,7 @@
   border: 1px solid #939393;
   border-radius: 0.5rem;
   position: relative;
+  margin-bottom: 5rem;
 }
 
 .cardReview .topCardReview {
@@ -35,5 +36,5 @@
   align-items: center;
   position: absolute;
   width: 285px;
-  gap: 0.4rem;
+  /* gap: 0.4rem; */
 }

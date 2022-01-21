@@ -1,8 +1,21 @@
 import CardReview from 'components/General/CardReview';
 import React from 'react';
 import styles from './index.module.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination, Navigation } from 'swiper';
+
+SwiperCore.use([Pagination, Navigation]);
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 export default function LatesReview() {
+  const pagination = {
+    clickable: true,
+  };
+
   const latestReview = [
     {
       user: 'atikaxr',
@@ -28,18 +41,18 @@ export default function LatesReview() {
       comment:
         'liptint pertamaku haha dengan harga yang affordable udah bisa membuat korean look di wajahku (ga cocok si haha), cairrr, mudah kering jadi',
     },
-    // {
-    //   user: 'atikaxr',
-    //   profile: ['Oily', 'Medium Dark', 'Warm', '19 - 24'],
-    //   product: {
-    //     image: 'https://static.femaledaily.com/dyn/480/images/prod-pics/product_1525323944_Tonymoly_D_800x800.jpg',
-    //     name: 'Tony Moly',
-    //     desc: 'Delight Tony Tint',
-    //   },
-    //   star: 3,
-    //   comment:
-    //     'liptint pertamaku haha dengan harga yang affordable udah bisa membuat korean look di wajahku (ga cocok si haha), cairrr, mudah kering jadi',
-    // },
+    {
+      user: 'atikaxr',
+      profile: ['Oily', 'Medium Dark', 'Warm', '19 - 24'],
+      product: {
+        image: 'https://static.femaledaily.com/dyn/480/images/prod-pics/product_1525323944_Tonymoly_D_800x800.jpg',
+        name: 'Tony Moly',
+        desc: 'Delight Tony Tint LAAA',
+      },
+      star: 3,
+      comment:
+        'liptint pertamaku haha dengan harga yang affordable udah bisa membuat korean look di wajahku (ga cocok si haha), cairrr, mudah kering jadi',
+    },
   ];
 
   return (
@@ -56,16 +69,32 @@ export default function LatesReview() {
         </div>
         <div className={styles.reviews}>
           <div className={styles.cards}>
-            {latestReview.map((data, idx) => (
-              <CardReview
-                key={idx}
-                user={data.user}
-                profile={data.profile}
-                product={data.product}
-                star={data.star}
-                comment={data.comment}
-              />
-            ))}
+            <Swiper
+              slidesPerView={2}
+              spaceBetween={10}
+              slidesPerGroup={2}
+              loop={false}
+              loopFillGroupWithBlank={true}
+              pagination={pagination}
+              navigation={true}
+              className='mySwiper'
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+            >
+              {latestReview.map((data, idx) => (
+                <SwiperSlide key={idx}>
+                  <CardReview
+                    user={data.user}
+                    profile={data.profile}
+                    product={data.product}
+                    star={data.star}
+                    comment={data.comment}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
