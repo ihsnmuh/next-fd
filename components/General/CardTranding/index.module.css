@@ -1,0 +1,39 @@
+.editorCard .editorContentCard {
+  height: 22.5rem;
+  width: 196px;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: #ffffff;
+}
+
+.editorContentCard img {
+  width: 100%;
+  height: 182px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.editorContentCard .starsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 0.3rem;
+  margin: 0.7rem 0;
+}
+
+.editorContentCard .descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+  gap: 0.3rem;
+  margin: 0.7rem 0;
+}
+
+.editorContentCard .starsContainer .stars {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}

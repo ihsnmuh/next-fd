@@ -1,0 +1,16 @@
+.lastestDescription {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lastestDescription .seemoreArt {
+  text-decoration: none;
+  color: #dc294f;
+}
+
+.trandingProducts {
+  width: 100%;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}

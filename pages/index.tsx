@@ -6,6 +6,9 @@ import LatesReview from 'components/LatestReview';
 import LatestVideo from 'components/LatesVideo';
 import PopularGroup from 'components/PopularGroup';
 import ProductMatches from 'components/ProductMatches';
+import TextInfo from 'components/TextInfo';
+import TopBrands from 'components/TopBrands';
+import Tranding from 'components/Tranding';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -24,6 +27,9 @@ const Home: NextPage = () => {
       <LatesReview />
       <PopularGroup />
       <LatestVideo />
+      <Tranding />
+      <TopBrands />
+      <TextInfo />
     </>
   );
 };

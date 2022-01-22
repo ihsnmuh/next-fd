@@ -1,0 +1,46 @@
+/* Footer */
+.containerFooter {
+  padding: 1rem 10rem;
+  border-top: 1px solid #ccd0dd;
+}
+
+.containerFooter .menusFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.containerFooter .menusFooter ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.containerFooter .menusFooter ul li {
+  margin-bottom: 1rem;
+}
+
+.containerFooter .menusFooter a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.appDownload .store {
+  display: flex;
+  gap: 1rem;
+}
+
+.containerFooter .bottomFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerFooter .bottomFooter .sosmedIcon {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-right: 6rem;
+}

@@ -1,0 +1,23 @@
+.lastestDescription {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lastestDescription .seemoreArt {
+  text-decoration: none;
+  color: #dc294f;
+}
+
+.brandsContainer {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brandsContainer .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 110px;
+}
