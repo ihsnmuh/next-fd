@@ -1,46 +1,49 @@
 import CardArticle from 'components/General/CardArticle';
+import { useTypedSelector } from 'hooks';
 import React from 'react';
 import styles from './index.module.css';
 
 export default function LatestArticle() {
-  const latestArticles = [
-    {
-      title: 'Brush dan Alat Makeup Yang Paling Sering Digunakan',
-      author: 'celle',
-      image: 'https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg',
-      published_at: '4 hours ago',
-    },
-    {
-      title: 'Brush dan Alat Makeup Yang Paling Sering Digunakan',
-      author: 'celle',
-      image: 'https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg',
-      published_at: '4 hours ago',
-    },
-    {
-      title: 'Brush dan Alat Makeup Yang Paling Sering Digunakan',
-      author: 'celle',
-      image: 'https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg',
-      published_at: '4 hours ago',
-    },
-    {
-      title: 'Brush dan Alat Makeup Yang Paling Sering Digunakan',
-      author: 'celle',
-      image: 'https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg',
-      published_at: '4 hours ago',
-    },
-    {
-      title: 'Brush dan Alat Makeup Yang Paling Sering Digunakan',
-      author: 'celle',
-      image: 'https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg',
-      published_at: '4 hours ago',
-    },
-    {
-      title: 'Brush dan Alat Makeup Yang Paling Sering Digunakan',
-      author: 'celle',
-      image: 'https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg',
-      published_at: '4 hours ago',
-    },
-  ];
+  const { data_fetch } = useTypedSelector((state) => state.data);
+
+  // const latestArticles = [
+  //   {
+  //     title: 'Brush dan Alat Makeup Yang Paling Sering Digunakan',
+  //     author: 'celle',
+  //     image: 'https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg',
+  //     published_at: '4 hours ago',
+  //   },
+  //   {
+  //     title: 'Brush dan Alat Makeup Yang Paling Sering Digunakan',
+  //     author: 'celle',
+  //     image: 'https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg',
+  //     published_at: '4 hours ago',
+  //   },
+  //   {
+  //     title: 'Brush dan Alat Makeup Yang Paling Sering Digunakan',
+  //     author: 'celle',
+  //     image: 'https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg',
+  //     published_at: '4 hours ago',
+  //   },
+  //   {
+  //     title: 'Brush dan Alat Makeup Yang Paling Sering Digunakan',
+  //     author: 'celle',
+  //     image: 'https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg',
+  //     published_at: '4 hours ago',
+  //   },
+  //   {
+  //     title: 'Brush dan Alat Makeup Yang Paling Sering Digunakan',
+  //     author: 'celle',
+  //     image: 'https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg',
+  //     published_at: '4 hours ago',
+  //   },
+  //   {
+  //     title: 'Brush dan Alat Makeup Yang Paling Sering Digunakan',
+  //     author: 'celle',
+  //     image: 'https://imgcdn.femaledaily.com/2019/06/5-makeup-tools-3-Copy.jpg',
+  //     published_at: '4 hours ago',
+  //   },
+  // ];
 
   return (
     <section className='containerFluid'>
@@ -54,7 +57,7 @@ export default function LatestArticle() {
         </div>
       </div>
       <div className={styles.articlesContainer}>
-        {latestArticles.map((data, idx) => (
+        {data_fetch?.['latest articles']?.map((data: any, idx: React.Key | null | undefined) => (
           <CardArticle
             key={idx}
             title={data.title}

@@ -11,8 +11,17 @@ import TopBrands from 'components/TopBrands';
 import Tranding from 'components/Tranding';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getAllData } from 'store/actionsCreator/data';
 
 const Home: NextPage = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllData());
+  }, []);
+
   return (
     <>
       <Head>

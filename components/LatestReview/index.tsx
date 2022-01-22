@@ -10,50 +10,53 @@ SwiperCore.use([Pagination, Navigation]);
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { useTypedSelector } from 'hooks';
 
 export default function LatesReview() {
   const pagination = {
     clickable: true,
   };
 
-  const latestReview = [
-    {
-      user: 'atikaxr',
-      profile: ['Oily', 'Medium Dark', 'Warm', '19 - 24'],
-      product: {
-        image: 'https://static.femaledaily.com/dyn/480/images/prod-pics/product_1525323944_Tonymoly_D_800x800.jpg',
-        name: 'Tony Moly',
-        desc: 'Delight Tony Tint',
-      },
-      star: 3,
-      comment:
-        'liptint pertamaku haha dengan harga yang affordable udah bisa membuat korean look di wajahku (ga cocok si haha), cairrr, mudah kering jadi',
-    },
-    {
-      user: 'atikaxr',
-      profile: ['Oily', 'Medium Dark', 'Warm', '19 - 24'],
-      product: {
-        image: 'https://static.femaledaily.com/dyn/480/images/prod-pics/product_1525323944_Tonymoly_D_800x800.jpg',
-        name: 'Tony Moly',
-        desc: 'Delight Tony Tint',
-      },
-      star: 3,
-      comment:
-        'liptint pertamaku haha dengan harga yang affordable udah bisa membuat korean look di wajahku (ga cocok si haha), cairrr, mudah kering jadi',
-    },
-    {
-      user: 'atikaxr',
-      profile: ['Oily', 'Medium Dark', 'Warm', '19 - 24'],
-      product: {
-        image: 'https://static.femaledaily.com/dyn/480/images/prod-pics/product_1525323944_Tonymoly_D_800x800.jpg',
-        name: 'Tony Moly',
-        desc: 'Delight Tony Tint LAAA',
-      },
-      star: 3,
-      comment:
-        'liptint pertamaku haha dengan harga yang affordable udah bisa membuat korean look di wajahku (ga cocok si haha), cairrr, mudah kering jadi',
-    },
-  ];
+  const { data_fetch } = useTypedSelector((state) => state.data);
+
+  // const latestReview = [
+  //   {
+  //     user: 'atikaxr',
+  //     profile: ['Oily', 'Medium Dark', 'Warm', '19 - 24'],
+  //     product: {
+  //       image: 'https://static.femaledaily.com/dyn/480/images/prod-pics/product_1525323944_Tonymoly_D_800x800.jpg',
+  //       name: 'Tony Moly',
+  //       desc: 'Delight Tony Tint',
+  //     },
+  //     star: 3,
+  //     comment:
+  //       'liptint pertamaku haha dengan harga yang affordable udah bisa membuat korean look di wajahku (ga cocok si haha), cairrr, mudah kering jadi',
+  //   },
+  //   {
+  //     user: 'atikaxr',
+  //     profile: ['Oily', 'Medium Dark', 'Warm', '19 - 24'],
+  //     product: {
+  //       image: 'https://static.femaledaily.com/dyn/480/images/prod-pics/product_1525323944_Tonymoly_D_800x800.jpg',
+  //       name: 'Tony Moly',
+  //       desc: 'Delight Tony Tint',
+  //     },
+  //     star: 3,
+  //     comment:
+  //       'liptint pertamaku haha dengan harga yang affordable udah bisa membuat korean look di wajahku (ga cocok si haha), cairrr, mudah kering jadi',
+  //   },
+  //   {
+  //     user: 'atikaxr',
+  //     profile: ['Oily', 'Medium Dark', 'Warm', '19 - 24'],
+  //     product: {
+  //       image: 'https://static.femaledaily.com/dyn/480/images/prod-pics/product_1525323944_Tonymoly_D_800x800.jpg',
+  //       name: 'Tony Moly',
+  //       desc: 'Delight Tony Tint LAAA',
+  //     },
+  //     star: 3,
+  //     comment:
+  //       'liptint pertamaku haha dengan harga yang affordable udah bisa membuat korean look di wajahku (ga cocok si haha), cairrr, mudah kering jadi',
+  //   },
+  // ];
 
   return (
     <section className={styles.containerFluid}>
@@ -83,7 +86,7 @@ export default function LatesReview() {
                 disableOnInteraction: false,
               }}
             >
-              {latestReview.map((data, idx) => (
+              {data_fetch?.['latest review']?.map((data: any, idx: React.Key | null | undefined) => (
                 <SwiperSlide key={idx}>
                   <CardReview
                     user={data.user}
