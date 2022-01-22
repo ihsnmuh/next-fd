@@ -1,4 +1,5 @@
 import { Rating } from '@mui/material';
+import Image from 'next/image';
 import React from 'react';
 import styles from './index.module.css';
 
@@ -20,7 +21,14 @@ export default function CardReview(props: CardReviewProps) {
   return (
     <div className={styles.cardReview}>
       <div className={styles.topCardReview}>
-        <img src={props.product.image} className={styles.imgCardReview} />
+        <Image
+          src={props.product.image}
+          className={styles.imgCardReview}
+          width={65}
+          height={60}
+          alt={props.product.name}
+        />
+        {/* <img src={props.product.image} className={styles.imgCardReview} /> */}
         <div>
           <h4>{props.product.name}</h4>
           <p>{props.product.desc}</p>
@@ -41,7 +49,8 @@ export default function CardReview(props: CardReviewProps) {
         </div>
       </div>
       <div className={styles.userReview}>
-        <img className='user-img' src='./images/image-profile.jpg' width='50' />
+        <Image className='user-img' src={'/images/image-profile.jpg'} width={50} height={50} alt={props.profile[0]} />
+        {/* <img className='user-img' src='./images/image-profile.jpg' width='50' alt={props.profile[0]} /> */}
         <p className='text-sm fw-semibold'>{props.profile[0]}</p>
         <p className='text-xs color-palette-4'>
           {props.profile[1]}, {props.profile[2]}, {props.profile[3]}

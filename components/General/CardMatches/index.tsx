@@ -1,4 +1,5 @@
 import { Rating } from '@mui/material';
+import Image from 'next/image';
 import React from 'react';
 import styles from './index.module.css';
 
@@ -14,7 +15,15 @@ export default function CardMatches(props: CardMatchesProps) {
     <>
       <div className={styles.editorCard}>
         <div className={styles.editorContentCard}>
-          <img src={props.image} />
+          <Image
+            className={styles.imgProduct}
+            src={props.image}
+            layout='responsive'
+            width={196}
+            height={182}
+            alt={props.name}
+          />
+          {/* <img src={props.image} /> */}
           <p className='text-sm fw-semibold color-palette-1'>Match Skin Type</p>
           <div className={styles.starsContainer}>
             <p className='text-md fw-semibold'>{props.rating}</p>

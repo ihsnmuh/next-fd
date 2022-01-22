@@ -6,22 +6,22 @@ export default function PopularGroup() {
   const popularGroup = [
     {
       name: 'Embrace The curl',
-      image: './images/image-profile.jpg',
+      image: '/images/image-profile.jpg',
       description: 'May our curls pop and never stop!',
     },
     {
       name: 'Embrace The curl',
-      image: './images/image-profile.jpg',
+      image: '/images/image-profile.jpg',
       description: 'May our curls pop and never stop!',
     },
     {
       name: 'Embrace The curl',
-      image: './images/image-profile.jpg',
+      image: '/images/image-profile.jpg',
       description: 'May our curls pop and never stop!',
     },
     {
       name: 'Embrace The curl',
-      image: './images/image-profile.jpg',
+      image: '/images/image-profile.jpg',
       description: 'May our curls pop and never stop!',
     },
   ];

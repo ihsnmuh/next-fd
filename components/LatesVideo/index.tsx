@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import styles from './index.module.css';
 
@@ -15,21 +16,52 @@ export default function LatestVideo() {
       </div>
       <div className={styles.containerVideo}>
         <div>
+          {/* <Image
+            className={styles.imgCover}
+            src={
+              'https://editorial.femaledaily.com/wp-content/uploads/2022/01/FD-Best-Skincare-2021-versi-Editorial-Female-Daily.jpg'
+            }
+            alt='image Video'
+            width={450}
+            height={240}
+            layout='responsive'
+          /> */}
           <img
             className={styles.imgCover}
             src='https://editorial.femaledaily.com/wp-content/uploads/2022/01/FD-Best-Skincare-2021-versi-Editorial-Female-Daily.jpg'
+            alt='image Video'
           />
         </div>
         <div>
+          {/* <Image
+            className={styles.imgCover}
+            src={'https://editorial.femaledaily.com/wp-content/uploads/2022/01/FD-Biggest-Makeup-Trends-of-2021.jpg'}
+            alt='image Video'
+            width={450}
+            height={240}
+            layout='responsive'
+          /> */}
           <img
             className={styles.imgCover}
             src='https://editorial.femaledaily.com/wp-content/uploads/2022/01/FD-Biggest-Makeup-Trends-of-2021.jpg'
+            alt='image Video'
           />
         </div>
         <div>
+          {/* <Image
+            className={styles.imgCover}
+            src={
+              'https://editorial.femaledaily.com/wp-content/uploads/2022/01/FD-Rekomendasi-Parfume-yang-Wanginya-Gak-Pasaran-versi-Tasha-1.jpg'
+            }
+            alt='image Video'
+            width={450}
+            height={240}
+            layout='responsive'
+          /> */}
           <img
             className={styles.imgCover}
             src='https://editorial.femaledaily.com/wp-content/uploads/2022/01/FD-Rekomendasi-Parfume-yang-Wanginya-Gak-Pasaran-versi-Tasha-1.jpg'
+            alt='image Video'
           />
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { Rating } from '@mui/material';
+import Image from 'next/image';
 import React from 'react';
 import styles from './index.module.css';
 
@@ -20,14 +21,30 @@ export default function CardEditor(props: CardEditorProps) {
     <>
       <div className={styles.editorCard}>
         <div className={styles.editorUserCard}>
-          <img src='./images/image-profile.jpg' width='60px' />
+          <Image
+            className={styles.imgProfile}
+            src={'/images/image-profile.jpg'}
+            layout='fixed'
+            width={60}
+            height={60}
+            alt={props.editor}
+          />
+          {/* <img src='./images/image-profile.jpg' width='60px'  alt={props.editor} /> */}
           <div>
             <p className='text-md fw-semibold'>{props.editor}</p>
             <p className='text-xs'>{props.role}</p>
           </div>
         </div>
         <div className={styles.editorContentCard}>
-          <img src={props.product.image} />
+          <Image
+            className={styles.imgProduct}
+            src={props.product.image}
+            layout='responsive'
+            width={196}
+            height={182}
+            alt={props.product.name}
+          />
+          {/* <img src={props.product.image} /> */}
           <div className={styles.starsContainer}>
             <p className='text-md fw-semibold'>{props.product.rating}</p>
             <div className={styles.star}>

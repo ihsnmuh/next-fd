@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import styles from './index.module.css';
 
@@ -10,7 +11,15 @@ interface CardPopularProps {
 export default function CardPopular(props: CardPopularProps) {
   return (
     <div className={styles.popularCard}>
-      <img className={styles.imgPopularGroup} src={props.image} width='170' />
+      <Image
+        className={styles.imgPopularGroup}
+        src={props.image}
+        layout='fixed'
+        width={170}
+        height={170}
+        alt={props.name}
+      />
+      {/* <img className={styles.imgPopularGroup} src={props.image} width='170' /> */}
       <h3 className='text-xl mb-25'>{props.name}</h3>
       <div className={styles.infoContainer}>
         <div className={styles.info}>

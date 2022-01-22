@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import styles from './index.module.css';
 
@@ -9,7 +10,8 @@ export default function Navbar() {
           <i className='fa fa-bars'></i>
         </button>
         <div className={styles.logo}>
-          <img src='./images/FD-Logo-Pink.png' height={'32px'} />
+          <Image src='/images/FD-Logo-Pink.png' height={32} width={154} alt='logo' />
+          {/* <img src='./images/FD-Logo-Pink.png' height={'32px'} /> */}
         </div>
         <div className={styles.inputContainer}>
           <i className='fa fa-search icon-search' style={{ padding: '0.5rem 0.6rem' }}></i>

@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     dispatch(getAllData());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

@@ -63,7 +63,7 @@ export default function EditorChoice() {
     <div className='containerFluid'>
       <section className={styles.container}>
         <div className={styles.titleContainer}>
-          <h3>Editor's Choice</h3>
+          <h3>{"Editor's Choice"}</h3>
           <p className='text-sm'>Curated with love</p>
         </div>
         <div className={styles.editorCards}>

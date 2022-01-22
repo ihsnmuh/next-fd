@@ -1,4 +1,5 @@
 import { Rating } from '@mui/material';
+import Image from 'next/image';
 import React from 'react';
 import styles from './index.module.css';
 
@@ -14,7 +15,15 @@ export default function CardTrading(props: CardTradingProps) {
   return (
     <div className={styles.editorCard}>
       <div className={styles.editorContentCard}>
-        <img src={props.image} />
+        <Image
+          className={styles.imgContent}
+          src={props.image}
+          layout='responsive'
+          width={196}
+          height={182}
+          alt={props.name}
+        />
+        {/* <img src={props.image} /> */}
         <div className={styles.starsContainer}>
           <p className='text-sm fw-semibold'>{props.rating}</p>
           <div className={styles.stars}>
