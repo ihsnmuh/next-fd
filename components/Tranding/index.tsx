@@ -1,4 +1,3 @@
-import CardTrading from 'components/General/CardTranding';
 import React from 'react';
 import styles from './index.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,13 +9,14 @@ SwiperCore.use([Pagination, Navigation]);
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import CardTrending from 'components/General/CardTrending';
 
-export default function Tranding() {
+export default function Trending() {
   const pagination = {
     clickable: true,
   };
 
-  const TrandingProduct = [
+  const TrendingProduct = [
     {
       name: 'SKINCEUTICALS',
       rating: 4.9,
@@ -78,7 +78,7 @@ export default function Tranding() {
   return (
     <section className='containerFluid'>
       <div className={styles.titleContainer}>
-        <h3>Tranding This Week</h3>
+        <h3>Trending This Week</h3>
         <div className={styles.lastestDescription}>
           <p className='text-sm'>See our weekly most reviewed products</p>
           <a href='#' className={styles.seemoreArt}>
@@ -101,9 +101,9 @@ export default function Tranding() {
             disableOnInteraction: false,
           }}
         >
-          {TrandingProduct.map((data, idx) => (
+          {TrendingProduct.map((data, idx) => (
             <SwiperSlide key={idx}>
-              <CardTrading
+              <CardTrending
                 key={idx}
                 name={data.name}
                 rating={data.rating}

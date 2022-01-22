@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import styles from './index.module.css';
 
-interface CardTradingProps {
+interface CardTrendingProps {
   name: string;
   rating: number;
   description: string;
@@ -11,7 +11,7 @@ interface CardTradingProps {
   image: string;
 }
 
-export default function CardTrading(props: CardTradingProps) {
+export default function CardTrending(props: CardTrendingProps) {
   return (
     <div className={styles.editorCard}>
       <div className={styles.editorContentCard}>
